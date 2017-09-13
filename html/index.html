@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../css/style.css" />
 <script src="https://use.fontawesome.com/cdf44b90a4.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="../js/script.js"></script>
 <title>Home | GitHub Universe</title>
 </head>
 
-<body>
+<body class="index">
   <div class="header">
     <div class="wrapper">
       <a class="logo" href="#">
@@ -47,10 +48,10 @@
 
     <div class="intro">
       <img class="logo" src="https://githubuniverse.com/assets/img/universe/GitHub-Universe-full.svg" />
-      <p>
-        OCT 10 - 12, 2017<br />
-        PIER 70, SAN FRANCISCO, CA
-      </p>
+      <img class="logo-white" src="https://githubuniverse.com/assets/img/universe/GitHub-Universe-full-white.svg" />
+
+      <p>OCT 10 - 12, 2017</p>
+      <p>PIER 70, SAN FRANCISCO, CA</p>
 
       <a href="#" class="get-ticket">
         <img src="../img/get-ticket.png" />
@@ -114,20 +115,260 @@
     </div>
 
     <div class="article2">
+      <div class="wrapper">
+        <h2>SPONSORS</h2>
+        <img class="praise" src="https://githubuniverse.com/assets/img/universe/shapes/praise.png" alt="praise icon">
 
+        <p class="desc">Interested in sponsoring alongside these companies?<br /></p>
+        <p class="desc">Check out our <a href="#">sponsorship prospectus</a> or email us at <a href="#">events@github.com.</a></p>
+
+        <ul class="sponsors">
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/ibm.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/compose.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/heroku.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/TravisCI.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/waffle-full.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/circle-ci.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/Axosoft.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/moz.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/AWS.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/BlackDuck.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/codeship.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/sticker-mule.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/Digital-Ocean.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/contegix.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/Modus-Create.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/code-sponsor.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/zenhub.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/sponsors/f5.png" />
+            </a>
+          </li>
+        </ul>
+
+        <h2>COMMUNITY PARTNERS</h2>
+        <img class="rock-on" src="https://githubuniverse.com/assets/img/universe/shapes/rock-on.png" alt="rock on icon">
+
+        <ul class="partners">
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/annie-cannons.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/code-tenderloin.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/code-2040.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/hack-reactor.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/peration-code.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/techqueria.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/woman-who-code.jpg" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/dev-color.png" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="https://githubuniverse.com/assets/img/universe/partners/older-women-coders.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="article3">
+      <div class="stars-lg"></div>
+      <img class="saturn" src="https://githubuniverse.com/assets/img/universe/shapes/planet-gradient.svg" alt="Saturn icon">
+      <div class="wrapper">
+        <img class="logo" src="https://githubuniverse.com/assets/img/universe/GitHub-Universe-Logotype.svg" alt="GitHub Universe Type logo">
 
-    </div>
+        <ul class="menu">
+          <li>
+            <a href="#">CODE OF CONDUCT</a>
+          </li>
 
-    <div class="article4">
+          <li>
+            <a href="#">FAQ</a>
+          </li>
 
+          <li>
+            <a href="#">EVENT TERMS</a>
+          </li>
+
+          <li>
+            <a href="#">GITHUB UNIVERSE 2016</a>
+          </li>
+        </ul>
+
+        <ul class="sns">
+          <li>
+            <span class="sns-name">TWITTER</span>
+            <a class="account" href="#">@githubuniverse</a>
+          </li>
+
+          <li>
+            <span class="sns-name">GENERAL</span>
+            <a class="account" href="#">events@github.com</a>
+          </li>
+
+          <li>
+            <span class="sns-name">PRESS</span>
+            <a class="account" href="#">press@github.com</a>
+          </li>
+
+          <li>
+            <a class="account" href="#">
+              SPONSORSHIP PROSPECTUS
+              <i class="fa fa-download" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="input-addr">
+          <div class="addr">
+            <h2>SIGN UP FOR UPDATES</h2>
+
+            <input type="text" placeholder="your email address" />
+            <button type="button">ADD ME!</button>
+          </div>
+          <div class="addr-footer"></div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="footer">
+    <div class="wrapper">
+      <p class="left">
+        <a href="#">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <i class="fa fa-angle-right" aria-hidden="true"></i> with
+          <i class="fa fa-heart" aria-hidden="true"></i> by
+          <img src="../img/github-logo.png" />
+        </a>
+      </p>
 
+      <p class="right">
+        <a href="#">Terms</a> / <a href="#">Privacy</a> / © 2017 GitHub, Inc.
+      </p>
+    </div>
   </div>
 </body>
 
