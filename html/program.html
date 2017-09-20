@@ -21,19 +21,19 @@
       <div class="nav">
         <ul>
           <li>
-            <a href="#">PROGRAM</a>
+            <a href="program.html">PROGRAM</a>
           </li>
 
           <li>
-            <a href="#">AFTER PARTY</a>
+            <a href="after-party.html">AFTER PARTY</a>
           </li>
 
           <li>
-            <a href="#">SPEAKERS</a>
+            <a href="speakers.html">SPEAKERS</a>
           </li>
 
           <li>
-            <a href="#">EXPERIENCE</a>
+            <a href="experience.html">EXPERIENCE</a>
           </li>
         </ul>
       </div>
@@ -45,15 +45,45 @@
   </div>
 
   <div class="banner">
-    <div class="stars-sm"></div>
-    <div class="stars-lg"></div>
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item">
+          <div class="stars-lg"></div>
+          <div class="stars-sm"></div>
+          <div class="intro">
+            <h2>TOGETHER, WE CAN DO MORE.</h2>
+            <p>
+              GitHub Universe brings together developers and business leaders solving technology's<br />
+              greatest challenges. Learn and build with the best in talks, trainings, and workshops.
+            </p>
+          </div>
+        </div>
 
-    <div class="intro">
-      <h2>TOGETHER, WE CAN DO MORE.</h2>
-      <p>
-        GitHub Universe brings together developers and business leaders solving technology's<br />
-        greatest challenges. Learn and build with the best in talks, trainings, and workshops.
-      </p>
+        <div class="item">
+          <div class="stars-lg"></div>
+          <div class="stars-sm"></div>
+          <div class="intro">
+            <h2>TOGETHER, WE CAN DO MORE.</h2>
+            <p>
+              GitHub Universe brings together developers and business leaders solving technology's<br />
+              greatest challenges. Learn and build with the best in talks, trainings, and workshops.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="stars-lg"></div>
+          <div class="stars-sm"></div>
+          <div class="intro">
+            <h2>TOGETHER, WE CAN DO MORE.</h2>
+            <p>
+              GitHub Universe brings together developers and business leaders solving technology's<br />
+              greatest challenges. Learn and build with the best in talks, trainings, and workshops.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -91,7 +121,7 @@
 		    </ul>
 
 			  <div class="tab-content clearfix">
-			    <div class="tab-pane active" id="workshop">
+          <div class="tab-pane active" id="workshop">
             <table class="schedule">
               <tr>
                 <td></td>
@@ -120,10 +150,13 @@
                 <td>10:00 AM</td>
 
                 <td>
-                  <p>
-                    <a href="#">Nerdy Git: all the super powered commands you have heard about, but are afraid to use</a>
+                  <p class="title">
+                    <a href="#">
+                      Nerdy Git: all the super powered commands you have heard about, but are<br />
+                      afraid to use
+                    </a>
                   </p>
-                  <p>- Cynthia Rich, GitHub</p>
+                  <p class="speaker">- Cynthia Rich, GitHub</p>
 
                   <div class="tag">
                     <span class="code">Code</span>
@@ -133,10 +166,11 @@
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">GitHub and the Internet of Things: automate IoT hardware</a>
                   </p>
-                  <p>- Jamie Strusz and Stefan Stölzle, GitHub</p>
+
+                  <p class="speaker">- Jamie Strusz and Stefan Stölzle, GitHub</p>
 
                   <div class="tag">
                     <span class="automation">Automation</span>
@@ -149,10 +183,11 @@
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Creating an InnerSource culture</a>
                   </p>
-                  <p>- Matt Desmond and James Garcia, GitHub</p>
+
+                  <p class="speaker">- Matt Desmond and James Garcia, GitHub</p>
 
                   <div class="tag">
                     <span class="collaboration">Collaboration</span>
@@ -173,24 +208,26 @@
                 <td>11:40 AM</td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Common challenges with Git in teams</a>
                   </p>
-                  <p>- Hector Alfaro, GitHub</p>
+
+                  <p class="speaker">- Hector Alfaro, GitHub</p>
 
                   <div class="tag">
                     <span class="collaboration">Collaboration</span>
                     <span class="git">Git</span>
                     <span class="github-talk">Github Talk</span>
-                    <span class="operation">Operation</span>
+                    <span class="operations">Operations</span>
                   </div>
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Build a chatbot</a>
                   </p>
-                  <p>- Michael Johnson and Briana Swift, GitHub</p>
+
+                  <p class="speaker">- Michael Johnson and Briana Swift, GitHub</p>
 
                   <div class="tag">
                     <span class="automation">Automation</span>
@@ -202,10 +239,11 @@
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Mental wellness in tech</a>
                   </p>
-                  <p>- Amanda Gelender, GitHub</p>
+
+                  <p class="speaker">- Amanda Gelender, GitHub</p>
 
                   <div class="tag">
                     <span class="community">Community</span>
@@ -225,10 +263,11 @@
                 <td>2:10 PM</td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Building a Git repository using plumbing commands</a>
                   </p>
-                  <p>- Cynthia Rich, GitHub</p>
+
+                  <p class="speaker">- Cynthia Rich, GitHub</p>
 
                   <div class="tag">
                     <span class="code">Code</span>
@@ -238,10 +277,11 @@
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Electron: start to finish</a>
                   </p>
-                  <p>- Eric Hollenberry and Nathan Henderson, GitHub</p>
+
+                  <p class="speaker">- Eric Hollenberry and Nathan Henderson, GitHub</p>
 
                   <div class="tag">
                     <span class="code">Code</span>
@@ -252,10 +292,11 @@
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">GitHub for managers</a>
                   </p>
-                  <p>- James Garcia, GitHub</p>
+
+                  <p class="speaker">- James Garcia, GitHub</p>
 
                   <div class="tag">
                     <span class="collaboration">Collaboration</span>
@@ -276,27 +317,29 @@
                 <td>3:50 PM</td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Fine tuning your GitHub flow: a deeper dive into GitHub workflows</a>
                   </p>
-                  <p>- Stefan Stölzle and Matt Duff, GitHub</p>
+
+                  <p class="speaker">- Stefan Stölzle and Matt Duff, GitHub</p>
 
                   <div class="tag">
                     <span class="architecture">Architecture</span>
                     <span class="collaboration">Collaboration</span>
                     <span class="github-talk">Github Talk</span>
-                    <span class="operation">Operations</span>
+                    <span class="operations">Operations</span>
                   </div>
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">How high performing software teams use Heroku pipelines for continuous delivery</a>
                   </p>
-                  <p>- Josh Lewis, Heroku</p>
+
+                  <p class="speaker">- Josh Lewis, Heroku</p>
 
                   <div class="tag">
-                    <span class="Automation">automation</span>
+                    <span class="automation">Automation</span>
                     <span class="code">Code</span>
                     <span class="github-inte-talk">GitHub Integrator Talk</span>
                     <span class="github-part-talk">GitHub Partner Talk</span>
@@ -306,10 +349,11 @@
                 </td>
 
                 <td>
-                  <p>
+                  <p class="title">
                     <a href="#">Inclusion for leaders</a>
                   </p>
-                  <p>- Bianca Escalante, GitHub</p>
+
+                  <p class="speaker">- Bianca Escalante, GitHub</p>
 
                   <div class="tag">
                     <span class="collaboration">Collaboration</span>
@@ -333,21 +377,867 @@
 				  </div>
 
           <div class="tab-pane" id="conf-day1">
-            <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+            <table class="schedule">
+              <tr>
+                <td></td>
+                <td>
+                  <p class="stage">STAGE 1:</p>
+                  <p>MILKY WAY</p>
+                </td>
+
+                <td>
+                  <p class="stage">STAGE 2:</p>
+                  <p>ANDROMEDA</p>
+                </td>
+
+                <td>
+                  <p class="stage">STAGE 3:</p>
+                  <p>CENTAURUS</p>
+                </td>
+
+                <td>
+                  <p class="stage">STAGE 4:</p>
+                  <p>LEADERSHIP</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>9:00 AM</td>
+                <td class="rest" colspan="4">BREAKFAST &amp; REGISTRATION</td>
+              </tr>
+
+              <tr>
+                <td>10:00 AM</td>
+                <td class="common" colspan="4">
+                  <p>OPENING KEYNOTE</p>
+                  <p>- Chris Wanstrath, Co-Founder &amp; CEO @ GitHub</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>11:00 AM</td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>11:10 AM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Launching GitHub's public GraphQL API</a>
+                  </p>
+
+                  <p class="speaker">- Brooks Swinnerton, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="graphql">GraphQL</span>
+                    <span class="integrations">intergraions</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="github-talk">Github Talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Managing GitHub at scale: episode II - attack of the<br />
+                      clones
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Alvaro Ramirez del Villar &amp; Frank Lamar, Home Depot</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="scaling-github">Scaling Github</span>
+                    <span class="admin">Admin</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Regulated industries, limitless possibilities: how<br />
+                      Capital One, Box, and Accenture Federal Services<br />
+                      stay compliant and innovative
+                    </a>
+                  </p>
+
+                  <p class="speaker">
+                    - Sid Sidhu, Box; Natalie Bradley, Accenture Federal Services;<br />
+                    Elizabeth Pemmerl, GitHub
+                  </p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="enterprise">Enterprise</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Fostering open source culture for healthier minds</a>
+                  </p>
+
+                  <p class="speaker">- Amy Dickens, GitHub Campus Expert</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="community">Community</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>11:50 PM</td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>12:00 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">GitHub driven refactoring</a>
+                  </p>
+
+                  <p class="speaker">- Ashley Ellis Pierce, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="github-talk">Github Talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Migrating to GitHub Enterprise safely and seamlessly</a>
+                  </p>
+
+                  <p class="speaker">- Dylan Vassallo, Stripe</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="enterprise">Enterprise</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Balancing identity &amp; privacy: building tools to help<br />
+                      users
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Lindsey Bieda, GitHub</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="people">People</span>
+                    <span class="security">Security</span>
+                    <span class="github-talk">Github Talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Accessibility: it's more than just screen readers</a>
+                  </p>
+
+                  <p class="speaker">- Stephanie Slattery, Clique Studios</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="product-design">Product Design</span>
+                    <span class="social-impact">Social Impact</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>12:40 PM</td>
+                <td class="rest" colspan="4">LUNCH</td>
+              </tr>
+
+              <tr>
+                <td>1:40 PM</td>
+                <td class="common" colspan="4">
+                  <p>FEATURED SPEAKER: MANOHAR PALURI - RESEARCH LEAD, COMPUTER VISION @ FACEBOOK</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2:10 PM</td>
+                <td class="common" colspan="4">
+                  <p>FEATURED SPEAKER</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2:40 PM</td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>2:50 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Extending with GitHub: easy integrations with<br />
+                      PRobot
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Jamie Jones, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="hubot">Hubots</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      How GitHub combined with CI empowers rapid<br />
+                      product delivery
+                    </a>
+                  </p>
+
+                  <p class="speaker">
+                    - Kashyap Parikh, Amit Mishra, and Daniel Martinez, Credit<br />
+                    Karma
+                  </p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="scaling-github">Scaling GitHub</span>
+                    <span class="automation">Automation</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Optimizing non-developer workflows with GitHub: a<br />
+                      case study of GitHub's legal team
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Tal Niv, GitHub</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="collaboration">Collaboration</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Criminal background: the making of a kickass<br />
+                      developer
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Jonathan Moore, Rowdy Orbit</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="social-impact">Social Impact</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  3:30 PM
+                </td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>4:00 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Real-time collaborative editing – the science behind<br />
+                      the magic
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Nathan Sobo, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="collaboration">Collaboration</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Isolating microservices without sacrificing velocity</a>
+                  </p>
+
+                  <p class="speaker">- Rob Zuber, CircleCI</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="architecture">Architecture</span>
+                    <span class="github-part-talk">GitHub Partner Talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Microsoft &lt;3's open source: becoming the biggest<br />
+                      contributor
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Edward Thomson, Microsoft</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="git">Git</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Caring for your fellow developers</a>
+                  </p>
+
+                  <p class="speaker">- Trent Willis, Netflix</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="enterprise">Enterprise</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  4:40 PM
+                </td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>4:50 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Improving your workflow with GitHub's API</a>
+                  </p>
+
+                  <p class="speaker">- Keavy McMinn, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Advanced GitHub Enterprise administration</a>
+                  </p>
+
+                  <p class="speaker">- Lars Schneider, Autodesk &amp; Todd O'Connor, Adobe</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="admin">Admin</span>
+                    <span class="scaling-github">Scaling Github</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Building CS50 on GitHub and Travis</a>
+                  </p>
+
+                  <p class="speaker">- David Malan, Harvard University</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="education">Education</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Having an invisible disease at GitHub</a>
+                  </p>
+
+                  <p class="speaker">- Jamie Strusz, GitHub</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="social-impact">Social Impact</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  8:00 - <br />
+                  12:00
+                </td>
+
+                <td class="after-party" colspan="4">
+                  <a href="#">
+                    GITHUB UNIVERSE AFTER PARTY
+                    <img src="https://githubuniverse.com/assets/img/universe/svgs/arrow-gradient.svg" />
+                  </a>
+                </td>
+              </tr>
+            </table>
 				  </div>
 
           <div class="tab-pane" id="conf-day2">
-            <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-				  </div>
+            <table class="schedule">
+              <tr>
+                <td></td>
+                <td>
+                  <p class="stage">STAGE 1:</p>
+                  <p>MILKY WAY</p>
+                </td>
 
-          <div class="tab-pane" id="filter">
-            <h3>We use css to change the background color of the content to be equal to the tab</h3>
+                <td>
+                  <p class="stage">STAGE 2:</p>
+                  <p>ANDROMEDA</p>
+                </td>
+
+                <td>
+                  <p class="stage">STAGE 3:</p>
+                  <p>CENTAURUS</p>
+                </td>
+
+                <td>
+                  <p class="stage">STAGE 4:</p>
+                  <p>LEADERSHIP</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>9:00 AM</td>
+                <td class="rest" colspan="4">BREAKFAST &amp; REGISTRATION</td>
+              </tr>
+
+              <tr>
+                <td>10:00 AM</td>
+                <td class="common" colspan="4">
+                  <p>OPENING KEYNOTE</p>
+                  <p>- Jason Warner, SVP Technology @ GitHub</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>11:00 AM</td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>11:10 AM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Tree-sitter: a new parsing system for programming<br />
+                      tools
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Max Brunsfeld, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="atom">Atom</span>
+                    <span class="integrations">intergraions</span>
+                    <span class="github-talk">Github Talk</span>
+                  </div>
+                </td>
+
+                <td></td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Building a better browser engine on GitHub</a>
+                  </p>
+
+                  <p class="speaker">- E. Dunham, Mozilla</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="community">Community</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Queer youth vs. technology</a>
+                  </p>
+
+                  <p class="speaker">- Monica Arrambide, Maven</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="social-impact">Social Impact</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>11:50 PM</td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>12:00 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Interop's labyrinth: sharing code between web &amp;<br />
+                      Electron apps
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Machiste Quintana, Slack</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="electron">Electron</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="security">Security</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Algorithmic biases in AI and machine learning</a>
+                  </p>
+
+                  <p class="speaker">- Terri Burns, Twitter</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="product-design">Product Design</span>
+                    <span class="social-impact">Social Impact</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">How legal Hubbers GitHub</a>
+                  </p>
+
+                  <p class="speaker">- Meena Polich &amp; Brooke Roundy, GitHub</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="collaboration">Collaboration</span>
+                    <span class="github-talk">Github Talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Building, scaling, and selling GitHub integrations</a>
+                  </p>
+
+                  <p class="speaker">- Kyle Daigle, GitHub</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="github-inte-talk">Github Integrator Talk</span>
+                    <span class="github-talk">Github talk</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>12:40 PM</td>
+                <td class="rest" colspan="4">LUNCH</td>
+              </tr>
+
+              <tr>
+                <td>1:40 PM</td>
+                <td class="common" colspan="4">
+                  <p>FEATURED SPEAKER</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2:10 PM</td>
+                <td class="common" colspan="4">
+                  <p>FEATURED SPEAKER</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2:40 PM</td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>2:50 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Tools as a catalyst for culture change</a>
+                  </p>
+
+                  <p class="speaker">- Bill Higgins, IBM and Jason Warner, GitHub</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="scaling-github">Scaling GitHub</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Tracking and automating software infrastructure with<br />
+                      GitHub
+                    </a>
+                  </p>
+
+                  <p class="speaker">- John Arthorne, Shopify</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="automation">Automation</span>
+                    <span class="integrations">Integrations</span>
+                    <span class="enterprise">Enterprise</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">The unbearable vulnerability of open source</a>
+                  </p>
+
+                  <p class="speaker">- Eileen Uchitelle, GitHub</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="community">Community</span>
+                    <span class="github-talk">GitHub talk</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">Building a tech community within an African society</a>
+                  </p>
+
+                  <p class="speaker">- Konrad Djimeli, GitHub Campus Expert</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="social-impact">Social Impact</span>
+                    <span class="community">Community</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  3:30 PM
+                </td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>4:00 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Quickly build a collaborative CMS powered by the<br />
+                      GitHub API
+                    </a>
+                  </p>
+
+                  <p class="speaker">- David Stolarsky, The New York Times</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="collaboration">Collaboration</span>
+                    <span class="integrations">Integrations</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Building diverse data communities with Jupyter<br />
+                      Notebooks
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Frances Haugen and Patrick Phelps, Pinterest</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="data">Data</span>
+                    <span class="community">Community</span>
+                    <span class="open-source">Open-source</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="security">Security</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      No excuses: if government can open source, so can<br />
+                      you
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Sara Cope, GSA</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="community">Community</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Why I decided to become a superhero of the social<br />
+                      world
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Alicia Carr, PEVO</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="social-impact">Social Impact</span>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  4:40 PM
+                </td>
+                <td class="rest" colspan="4">BREAK</td>
+              </tr>
+
+              <tr>
+                <td>4:50 PM</td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Using GitHub's GraphQL API to manage open source<br />
+                      projects
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Brian Douglas, Netlify</p>
+
+                  <div class="tag">
+                    <span class="code">Code</span>
+                    <span class="graphql">GraphQL</span>
+                    <span class="enterprise">Enterprise</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="integrations">Integrations</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Mine the music: searching efficiently with open<br />
+                      source
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Flora Dai, Pandora</p>
+
+                  <div class="tag">
+                    <span class="architecture">Architecture</span>
+                    <span class="data">Data</span>
+                    <span class="open-source">Open Source</span>
+                    <span class="enterprise">Enterprise</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">
+                      Nationwide's GitHub conversion - no IT project<br />
+                      needed
+                    </a>
+                  </p>
+
+                  <p class="speaker">- Chilumba Machona, Agrisave</p>
+
+                  <div class="tag">
+                    <span class="operations">Operations</span>
+                    <span class="enterprise">Enterprise</span>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="title">
+                    <a href="#">How Agrisave is using GitHub to end hunger</a>
+                  </p>
+
+                  <p class="speaker">- Cindy Payne and Jim Grafmeyer, Nationwide</p>
+
+                  <div class="tag">
+                    <span class="people">People</span>
+                    <span class="operations">Operations</span>
+                    <span class="community">Community</span>
+                    <span class="social-impact">Social Impact</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
 				  </div>
 			  </div>
       </div>
     </div>
 
-    <div class="article2">
+    <div class="etc">
       <div class="wrapper">
         <h2>SPONSORS</h2>
         <img class="praise" src="https://githubuniverse.com/assets/img/universe/shapes/praise.png" alt="praise icon">
@@ -526,7 +1416,7 @@
       </div>
     </div>
 
-    <div class="article3">
+    <div class="last-article">
       <div class="stars-lg"></div>
       <img class="saturn" src="https://githubuniverse.com/assets/img/universe/shapes/planet-gradient.svg" alt="Saturn icon">
       <div class="wrapper">

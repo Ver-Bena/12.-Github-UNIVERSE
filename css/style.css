@@ -23,11 +23,12 @@
   src: local(※), url(../fonts/StratumNo1-Regular.woff) format('woff');
 }
 
-* { margin: 0; padding: 0; }
+*, p, ul, li, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
 li { list-style: none; }
 html { position: relative; z-index: -4; }
 body { font-family: 'Nunito Sans', sans-serif; position: relative; z-index: -3; overflow-x: hidden; }
 a { text-decoration: none; }
+a:hover { text-decoration: none; }
 
 .header {
   width: 100%; height: 70px;
@@ -94,9 +95,8 @@ a { text-decoration: none; }
   bottom: 0; left: 0;
 }
 
-.header .nav ul li:hover a:after {
-  transform: scaleX(1);
-}
+.header .nav ul li:hover a { text-decoration: none; }
+.header .nav ul li:hover a:after { transform: scaleX(1); }
 
 .get-ticket {
   width: 160px; height: 48px;
@@ -132,7 +132,7 @@ a { text-decoration: none; }
 .stars-sm {
   width: 100%; height: 100%;
   background-image: url(https://githubuniverse.com/assets/img/universe/shapes/stars-sm.svg);
-  background-size: cover;
+  /*background-size: cover;*/
   position: absolute;
   top: 0; left: 0;
   opacity: 0.3;
@@ -142,7 +142,7 @@ a { text-decoration: none; }
 .stars-lg {
   width: 100%; height: 100%;
   background-image: url(https://githubuniverse.com/assets/img/universe/shapes/stars-lg.svg);
-  background-size: cover;
+  /*background-size: cover;*/
   position: absolute;
   top: 0; left: 0;
   opacity: 0.3;
@@ -214,18 +214,49 @@ a { text-decoration: none; }
   height: 660px;
   color: #fff;
   text-align: center;
-  background: linear-gradient(135deg, #5073B8 0%, #13a793 36%, #07B39B 81%, #6DBA82 100%);
   box-sizing: border-box;
-  padding: 100px 0;
   position: relative;
   z-index: -1;
-  animation: article1-bg 15s infinite;
 }
 
-@keyframes article1-bg {
-  33.33% { background: linear-gradient(135deg, #5073B8 0%, #13a793 36%, #07B39B 81%, #6DBA82 100%); }
-  66.66% { background: linear-gradient(135deg, #e06e61 0%, #d96073 36%, #ce5b83 81%, #9d6ea5 100%); }
-  100% { background: linear-gradient(135deg, #9668ab 0%, #7b71aa 36%, #6974ad 81%, #567cb1 100%); }
+
+.carousel-fade .carousel-inner .item { transition-property: opacity; }
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner.active.right { opacity: 0; }
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right { opacity: 1; }
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+    height: 100%;
+}
+
+.index .carousel { position: relative; z-index: -3; }
+.index .carousel-inner { position: relative; z-index: -2; }
+.index .carousel-inner .item { box-sizing: border-box; padding: 100px 0; }
+
+.item:nth-child(1) {
+    background: linear-gradient(135deg, #5073B8 0%, #13a793 36%, #07B39B 81%, #6DBA82 100%);
+}
+
+.item:nth-child(2) {
+    background: linear-gradient(135deg, #F37055 0%, #EF4E7B 52%, #C55B95 77%, #A166AB 100%)
+}
+
+.item:nth-child(3) {
+    background: linear-gradient(135deg, #A166AB 0%, #5073B8 100%);
 }
 
 .index .section .article1 .title {
@@ -251,6 +282,7 @@ a { text-decoration: none; }
 .index .section .article1 h2.active { opacity: 1; transform: translateY(-10px); }
 
 .index .section .article1 ul {
+  /*height: 350px;*/
   border: 3px solid #fff;
   margin-top: 60px;
   overflow: auto;
@@ -272,7 +304,12 @@ a { text-decoration: none; }
 
 .index .section .article1 ul li:last-child { border-right: 0; }
 
-.index .section .article1 ul li h3 { margin-bottom: 10px; }
+.index .section .article1 ul li h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
 .index .section .article1 ul li p { font-size: 18px; line-height: 28px; }
 .index .section .article1 ul li a {
   display: inline-block;
@@ -304,7 +341,7 @@ a { text-decoration: none; }
 }
 
 .index .section .article1 .table-footer.active { opacity: 1; transform: translateY(-10px); }
-.section .article2 .wrapper {
+.section .etc .wrapper {
   max-width: 1005px; height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -312,7 +349,7 @@ a { text-decoration: none; }
   position: relative;
 }
 
-.section .article2 h2 {
+.section .etc h2 {
   display: inline-block;
   font-family: 'Stratum Bold';
   font-size: 40px;
@@ -328,9 +365,9 @@ a { text-decoration: none; }
   transition: opacity .5s linear, transform .3s linear;*/
 }
 
-.section .article2 h2.active { opacity: 1; transform: translateY(-10px); }
-.section .article2 .praise,
-.section .article2 .rock-on {
+.section .etc h2.active { opacity: 1; transform: translateY(-10px); }
+.section .etc .praise,
+.section .etc .rock-on {
   height: 40px;
   margin-left: 10px;
   /*transform: translateY(0px);
@@ -338,54 +375,54 @@ a { text-decoration: none; }
   transition: opacity .5s linear, transform .3s linear;*/
 }
 
-.section .article2 .praise.active,
-.section .article2 .rock-on.active { opacity: 1; transform: translateY(-10px); }
-.section .article2 .desc {
+.section .etc .praise.active,
+.section .etc .rock-on.active { opacity: 1; transform: translateY(-10px); }
+.section .etc .desc {
   font-size: 18px;
   line-height: 30px;
   /*transform: translateY(0px);
   opacity: 0;*/
 }
 
-.section .article2 .desc:first-of-type { margin-top: 10px; transition: opacity .5s linear .1s, transform .3s linear .1s; }
-.section .article2 .desc:nth-of-type(2) { margin-top: 0; transition: opacity .5s linear .2s, transform .3s linear .2s; }
-.section .article2 .desc.active { opacity: 1; transform: translateY(-10px); }
-.section .article2 .desc a { color: #22292C; text-decoration: underline; }
-.section .article2 ul {
+.section .etc .desc:first-of-type { margin-top: 10px; transition: opacity .5s linear .1s, transform .3s linear .1s; }
+.section .etc .desc:nth-of-type(2) { margin-top: 0; transition: opacity .5s linear .2s, transform .3s linear .2s; }
+.section .etc .desc.active { opacity: 1; transform: translateY(-10px); }
+.section .etc .desc a { color: #22292C; text-decoration: underline; }
+.section .etc ul {
   margin: 60px 0 160px;
   transform: translateY(0px);
   /*opacity: 0;*/
   transition: opacity .5s linear, transform .3s linear;
 }
 
-.section .article2 ul.active { opacity: 1; transform: translateY(-10px); }
-.section .article2 ul:after {
+.section .etc ul.active { opacity: 1; transform: translateY(-10px); }
+.section .etc ul:after {
   display: block;
   content: '';
   clear: both;
 }
 
-.section .article2 ul li {
+.section .etc ul li {
   display:table-row;
   width: 20%; height: 90px;
   float: left;
 }
 
-.section .article2 ul li a {
+.section .etc ul li a {
   display: inline-block;
   width: 100%; height: 100%;
   line-height: 90px;
   position: relative;
 }
 
-.section .article2 ul li a img {
+.section .etc ul li a img {
   max-width: 150px; max-height: 90px;
   position: absolute;
   top: 50%; left: 0;
   transform: translateY(-50%);
 }
 
-.section .article3 {
+.section .last-article {
   height: 400px;
   color: #fff;
   font-family: 'Stratum Bold';
@@ -394,13 +431,13 @@ a { text-decoration: none; }
   z-index: -1;
 }
 
-.section .article3 a {
+.section .last-article a {
   opacity: 1;
   transition: opacity .5s;
 }
 
-.section .article3 a:hover { opacity: 0.5; }
-.section .article3 .saturn {
+.section .last-article a:hover { opacity: 0.5; }
+.section .last-article .saturn {
   width: 110px;
   position: absolute;
   top: 40px; right: 40px;
@@ -409,61 +446,61 @@ a { text-decoration: none; }
   transition: opacity .5s linear, transform .3s linear;*/
 }
 
-.section .article3 .saturn.active {
+.section .last-article .saturn.active {
   transform: rotate(0deg);
   opacity: 1;
 }
 
-.section .article3 .logo {
+.section .last-article .logo {
   position: absolute;
   top: 90px; left: 0;
   /*opacity: 0;
   transition: opacity .5s linear;*/
 }
 
-.section .article3 .logo.active { opacity: 1; }
-.section .article3 .menu {
+.section .last-article .logo.active { opacity: 1; }
+.section .last-article .menu {
   position: absolute;
   top: 150px; left: 0;
 }
 
-.section .article3 li {
+.section .last-article li {
   margin-bottom: 10px;
 }
 
-.section .article3 li a {
+.section .last-article li a {
   color: #fff;
   letter-spacing: 2px;
 }
 
-.section .article3 .sns {
+.section .last-article .sns {
   position: absolute;
   top: 150px; left: 430px;
 }
 
-.section .article3 .sns li span {
+.section .last-article .sns li span {
   display: inline-block;
   letter-spacing: 2px;
   margin-right: 20px;
 }
 
-.section .article3 .sns li a { font-family: 'Nunito Sans'; }
-.section .article3 .sns li:last-child a { font-family: 'Stratum Bold'; }
-.section .article3 .input-addr {
+.section .last-article .sns li a { font-family: 'Nunito Sans'; }
+.section .last-article .sns li:last-child a { font-family: 'Stratum Bold'; }
+.section .last-article .input-addr {
   position: absolute;
   top: 150px; right: 0;
 }
 
-.section .article3 .input-addr .addr { overflow: auto; }
-.section .article3 .input-addr .addr > * { float: left; }
-.section .article3 .input-addr .addr h2 {
+.section .last-article .input-addr .addr { overflow: auto; }
+.section .last-article .input-addr .addr > * { float: left; }
+.section .last-article .input-addr .addr h2 {
   font-size: 20px;
   letter-spacing: 2px;
   float: none;
   margin-bottom: 15px;
 }
 
-.section .article3 .input-addr input {
+.section .last-article .input-addr input {
   width: 400px; height: 40px;
   background: transparent;
   border: 1px solid #fff;
@@ -473,17 +510,17 @@ a { text-decoration: none; }
   outline: none;
 }
 
-.section .article3 .input-addr input::placeholder {
+.section .last-article .input-addr input::placeholder {
   color: #fff;
   opacity: 0.7;
   transition: opacity .5s;
 }
 
-.section .article3 .input-addr input:focus::placeholder {
+.section .last-article .input-addr input:focus::placeholder {
   opacity: 0.3;
 }
 
-.section .article3 .input-addr button {
+.section .last-article .input-addr button {
   color: #fff;
   font-size: 16px;
   font-family: 'Stratum Heavy';
@@ -496,12 +533,12 @@ a { text-decoration: none; }
   transition: background-color .3s;
 }
 
-.section .article3 .input-addr button:hover {
+.section .last-article .input-addr button:hover {
   color: #22292C;
   background-color: #fff;
 }
 
-.section .article3 .addr-footer {
+.section .last-article .addr-footer {
   width: 100%; height: 5px;
   background: transparent;
   border: 1px solid #fff;
@@ -649,17 +686,63 @@ a { text-decoration: none; }
 .program .section .article1 .schedule { width: 100%; color: #fff; }
 
 /* 행(column)의 width */
-.program .section .article1 .schedule td { width: 30.8%; }
-.program .section .article1 .schedule td:first-child { width: 7.6%; }
+.program .section .article1 #workshop .schedule td { width: 30.8%; }
+.program .section .article1 #workshop .schedule td:first-child { width: 7.6%; }
+.program .section .article1 #conf-day1 .schedule td,
+.program .section .article1 #conf-day2 .schedule td { width: 23.1%; }
+.program .section .article1 #conf-day1 .schedule td:first-child,
+.program .section .article1 #conf-day2 .schedule td:first-child { width: 7.6%; }
 
 /* 강의 제목 */
-.program .section .article1 .schedule td a { color: #fff; text-decoration: underline; }
+.program .section .article1 .schedule .title { overflow: auto; }
+.program .section .article1 .schedule .title a {
+  color: #fff;
+  text-decoration: underline;
+  line-height: 25px;
+  float: left;
+}
+
+/* 강의 제목 앞 장식 */
+.program .section .article1 .schedule td .title:before,
+.program .section .article1 .schedule .common p:first-child:before {
+  content: '';
+  display: block;
+  width: 8px; height: 8px;
+  background-color: #e67207;
+  border-radius: 100%;
+  margin-top: 8px;
+  margin-right: 8px;
+  float: left;
+}
+
+.program .section .article1 .schedule .common p:first-child:before { margin-top: 10px; margin-right: 8px; }
+
+.program .section .article1 .schedule td:nth-child(2) .title:before { background-color: #e67207; }
+.program .section .article1 .schedule td:nth-child(3) .title:before { background-color: #f2684c; }
+.program .section .article1 .schedule td:nth-child(4) .title:before { background-color: #ef4e7b; }
+.program .section .article1 .schedule td:nth-child(5) .title:before { background-color: #A166AB; }
+
+/* 강의 발표자 */
+.program .section .article1 .schedule .speaker {
+  color: #828585;
+  font-size: 13px;
+  margin: 3px 0;
+  margin-left: 15px;
+}
+
+.program .after-party a {
+  color: #fff;
+  font-family: 'Stratum Bold';
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin-left: 10px;
+}
 
 /* table의 첫 열 (track) */
 .program .section .article1 .schedule tr:first-child {
   font-family: 'Stratum Bold';
   font-size: 17px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 /* 공통 일정, table의 첫 행 (시간) */
@@ -673,11 +756,956 @@ a { text-decoration: none; }
 
 /* 공통 일정 */
 .program .section .article1 .schedule tr .rest { color: #696B6B; }
+.program .section .article1 .schedule tr .common {
+  color: #fff;
+  font-family: 'Stratum Bold';
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.program .section .article1 .schedule .common p:first-child {
+  display: inline-block;
+  letter-spacing: 3px;
+}
+.program .section .article1 .schedule tr .common p:nth-child(2) {
+  color: #828585;
+  font-family: 'Nunito Sans';
+  font-size: 13px;
+}
 
 /* table의 첫 열의 track 1:에 margin */
 .program .section .article1 .schedule tr:first-child .track { margin-bottom: 10px; }
 
 /* 셀마다 글자색을 달리 설정 */
-.program .section .article1 .schedule tr:first-child td:nth-child(2) .track { color: #e67207; }
-.program .section .article1 .schedule tr:first-child td:nth-child(3) .track { color: #f2684c; }
-.program .section .article1 .schedule tr:first-child td:nth-child(4) .track { color: #ef4e7b; }
+.program .section .article1 .schedule tr:first-child td:nth-child(2) p:first-child { color: #e67207; }
+.program .section .article1 .schedule tr:first-child td:nth-child(3) p:first-child { color: #f2684c; }
+.program .section .article1 .schedule tr:first-child td:nth-child(4) p:first-child { color: #ef4e7b; }
+.program .section .article1 .schedule tr:first-child td:nth-child(5) p:first-child { color: #A166AB; }
+
+/* 태그 */
+.tag > span {
+  display: inline-block;
+  font-size: 11px;
+  position: relative;
+}
+
+.tag > span:first-child { margin-left: 15px; }
+.tag > span:after {
+  display: block;
+  width: calc(100% - 2px); height: calc(100% - 2px);
+  text-align: center;
+  background-color: #1A1F21;
+  border-radius: 3px;
+  padding: 2px 0;
+  position: absolute;
+  top: 1px; left: 1px;
+}
+
+.tag .enterprise {
+  color: #A166AB;
+  font-size: 11px;
+  background: linear-gradient(to right, #A166AB, #5073B8);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .enterprise:after { content: 'Enterprise'; }
+
+.tag .open-source {
+  color: #5073B8;
+  font-size: 11px;
+  background: linear-gradient(to right, #5073B8, #1097AD);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.tag .open-source:after { content: 'Open Source'; }
+
+.tag .social-impact {
+  color: #F79533;
+  font-size: 11px;
+  background: linear-gradient(to right, #F79533, #F37154);
+  border-radius: 3px;
+  padding: 3px 6px;
+}
+
+.tag .social-impact:after { content: 'Social Impact'; }
+
+.tag .education {
+  color: #13A793;
+  font-size: 11px;
+  background: linear-gradient(to right, #13A793, #6CBA82);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .education:after { content: 'Education'; }
+
+.tag .community {
+  color: #F79533;
+  font-size: 11px;
+  background: linear-gradient(to right, #F79533, #F37054);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .community:after { content: 'Community'; }
+
+.tag .code {
+  color: #A166AB;
+  font-size: 11px;
+  background: linear-gradient(to right, #A166AB, #5073B8);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .code:after { content: 'Code'; }
+
+.tag .operations {
+  color: #13A793;
+  font-size: 11px;
+  background: linear-gradient(to right, #13A793, #6CBA82);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .operations:after { content: 'Operations'; }
+
+.tag .architecture {
+  color: #F79533;
+  font-size: 11px;
+  background: linear-gradient(to right, #F79533, #F37054);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .architecture:after { content: 'Architecture'; }
+
+.tag .automation {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #4F73B8);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .automation:after { content: 'Automation'; }
+
+.tag .admin {
+  color: #EF4E7B;
+  font-size: 11px;
+  background: linear-gradient(to right, #EF4E7B, #A265AA);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .admin:after { content: 'Admin'; }
+
+.tag .people {
+  color: #E67207;
+  font-size: 11px;
+  background: linear-gradient(to right, #E67207, #EE4F76);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .people:after { content: 'People'; }
+
+.tag .data {
+  color: #5073B8;
+  font-size: 11px;
+  background: linear-gradient(to right, #5073B8, #1097AD);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .data:after { content: 'Data'; }
+
+.tag .electron {
+  color: #E67207;
+  font-size: 11px;
+  background: linear-gradient(to right, #E67207, #EE4F76);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .electron:after { content: 'Electron'; }
+
+.tag .graphql {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #13A693);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .graphql:after { content: 'GraphQL'; }
+
+.tag .git {
+  color: #5073B8;
+  font-size: 11px;
+  background: linear-gradient(to right, #5073B8, #1097AD);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .git:after { content: 'Git'; }
+
+.tag .integrations {
+  color: #E67207;
+  font-size: 11px;
+  background: linear-gradient(to right, #E67207, #EE4F76);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .integrations:after { content: 'Integrations'; }
+
+.tag .scaling-github {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #13A693);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .scaling-github:after { content: 'Scaling GitHub'; }
+
+.tag .collaboration {
+  color: #EF4E7B;
+  font-size: 11px;
+  background: linear-gradient(to right, #EF4E7B, #A265AA);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .collaboration:after { content: 'Collaboration'; }
+
+.tag .security {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #13A793);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .security:after { content: 'Security'; }
+
+.tag .product-design {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #4F73B8);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .product-design:after { content: 'Product Design'; }
+
+.tag .hubot {
+  color: #EF4E7B;
+  font-size: 11px;
+  background: linear-gradient(to right, #EF4E7B, #A265AA);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .hubot:after { content: 'Hubot'; }
+
+.tag .github-talk {
+  color: #696B6B;
+  font-size: 11px;
+  background: #696B6B;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.tag .github-talk:after { content: 'GitHub Talk'; }
+
+.tag .github-part-talk {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #4F73B8);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.tag .github-part-talk:after { content: 'GitHub Partner Talk'; }
+
+.tag .github-inte-talk {
+  color: #1098AD;
+  font-size: 11px;
+  background: linear-gradient(to right, #1098AD, #4F73B8);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.tag .github-inte-talk:after { content: 'GitHub Integrator Talk'; }
+
+.tag .atom {
+  color: #EF4E7B;
+  font-size: 11px;
+  background: linear-gradient(to right, #EF4E7B, #A265AA);
+  border-radius: 3px;
+  padding: 3px 4px;
+}
+
+.tag .atom:after { content: 'Atom'; }
+
+.after-party .section .article1 {
+  color: #fff;
+  font-family: 'Stratum Bold';
+  text-align: center;
+  letter-spacing: 3px;
+  background-color: #22292C;
+  position: relative;
+}
+
+.after-party .section .article1 .banner {
+  background-image: url(https://githubuniverse.com/assets/img/universe/shapes/star-group-sm.svg);
+  background-size: cover;
+  margin-top: 70px;
+}
+
+.after-party .section .article1 .flag {
+  display: inline-block;
+  width: 44px;
+  margin-top: 100px;
+}
+
+.after-party .section .article1 h1 {
+  font-size: 40px;
+}
+
+.after-party .section .article1 .date,
+.after-party .section .article1 .time {
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.after-party .section .article1 .time .place {
+  color: #fff;
+  padding: 3px;
+  position: relative;
+}
+
+.after-party .section .article1 .time .place:after {
+  display: block;
+  content: '';
+  width: 100%; height: 2px;
+  background-image: linear-gradient(-135deg, #F37055 0%, #EF4E7B 52%, #A166AB 100%);
+  position: absolute;
+  bottom: 0; left: 0;
+}
+
+.after-party .section .article1 .age {
+  font-family: 'Nunito Sans';
+  font-size: 18px;
+  letter-spacing: 0px;
+  margin-top: 15px;
+}
+
+.after-party .section .article1 ul {
+  margin: 130px 0 80px;
+  overflow: auto;
+}
+
+.after-party .section .article1 ul li {
+  width: 45%; height: 250px;
+  font-family: 'Nunito Sans';
+  text-align: left;
+  background: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
+  border-radius: 5px;
+  float: left;
+  position: relative;
+}
+
+.after-party .section .article1 ul li .text {
+  width: calc(100% - 8px); height: calc(100% - 8px);
+  background-color: #22292C;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 50px 20px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.after-party .section .article1 ul li h2 {
+  font-family: 'Stratum Bold';
+  font-size: 23px;
+}
+
+.after-party .section .article1 ul li p {
+  font-size: 17px;
+  letter-spacing: 0;
+  margin-top: 15px;
+}
+
+.after-party .section .article1 ul li:first-child {
+  margin-right: 50px;
+}
+
+.speakers .section .article1 {
+  color: #fff;
+  margin-top: 70px;
+}
+
+.speakers .section .article1 #carousel .item {
+  padding: 100px 0;
+}
+
+.speakers .section .article1 .wrapper > h1 {
+  font-family: 'Stratum Bold';
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.speakers .section .article1 .wrapper > p {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.speakers .section .article1 .speakers-list { margin-top: 60px; }
+
+.speakers .section .article1 .speakers-list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.speakers .section .article1 .speakers-list dl {
+  width: 340px; height: 405px;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  float: left;
+}
+
+.speakers .section .article1 .speakers-list dl:hover dt img { transform: translateY(-10px); }
+.speakers .section .article1 .speakers-list dl:hover dt .rectangle1 { transform: translate(6px, -4px); opacity: 1; }
+.speakers .section .article1 .speakers-list dl:hover dt .rectangle2 { transform: translate(13px, 2px); opacity: 1; }
+.speakers .section .article1 .speakers-list dl:hover dt:after { transform: translateY(-10px); }
+
+.speakers .section .article1 .speakers-list dt {
+  height: 300px;
+  position: relative;
+}
+
+.speakers .section .article1 .speakers-list dt .rectangle1,
+.speakers .section .article1 .speakers-list dt .rectangle2 {
+  width: 100%; height: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transform: translate(0, 0);
+  position: absolute;
+  opacity: 0;
+  transition: transform .7s, opacity .7s;
+}
+
+.speakers .section .article1 .speakers-list dt img {
+  width: 100%; height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  transform: translateY(0px);
+  transition: transform .7s;
+}
+
+.speakers .section .article1 .speakers-list dt:after {
+  content: '';
+  display: block;
+  width: 100%; height: 100%;
+  mix-blend-mode: multiply;
+  transform: translateY(0px);
+  transition: transform .7s;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0.5;
+}
+
+.speakers .section .article1 .speakers-list dl:nth-child(1) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(2) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(3) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(4) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(13) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(14) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(15) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(16) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(29) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(30) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(31) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(32) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(45) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(46) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(47) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(48) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(61) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(62) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(63) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(64) dt:after {
+  background: linear-gradient(-135deg, #F37055 0%, #EF4E7B 52%, #A166AB 100%);
+}
+
+.speakers .section .article1 .speakers-list dl:nth-child(5) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(6) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(7) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(8) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(17) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(18) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(19) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(20) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(33) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(34) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(35) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(36) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(49) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(50) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(51) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(52) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(65) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(66) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(67) dt:after {
+  background: linear-gradient(-135deg, #F79533 0%, #F37055 51%, #EF4E7B 100%);
+}
+
+.speakers .section .article1 .speakers-list dl:nth-child(9) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(10) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(11) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(12) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(21) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(22) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(23) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(24) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(37) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(38) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(39) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(40) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(53) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(54) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(55) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(56) dt:after {
+  background: linear-gradient(135deg, #A166AB 0%, #5073B8 100%);
+}
+
+.speakers .section .article1 .speakers-list dl:nth-child(13) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(14) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(15) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(16) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(25) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(26) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(27) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(28) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(41) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(42) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(43) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(44) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(57) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(58) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(59) dt:after,
+.speakers .section .article1 .speakers-list dl:nth-child(60) dt:after {
+  background: linear-gradient(135deg, #5073B8 0%, #13a793 36%, #07B39B 81%, #6DBA82 100%);
+}
+
+.speakers .section .article1 .speakers-list dl:nth-child(4),
+.speakers .section .article1 .speakers-list dl:nth-child(8),
+.speakers .section .article1 .speakers-list dl:nth-child(12),
+.speakers .section .article1 .speakers-list dl:nth-child(16),
+.speakers .section .article1 .speakers-list dl:nth-child(20),
+.speakers .section .article1 .speakers-list dl:nth-child(24),
+.speakers .section .article1 .speakers-list dl:nth-child(28),
+.speakers .section .article1 .speakers-list dl:nth-child(32),
+.speakers .section .article1 .speakers-list dl:nth-child(36),
+.speakers .section .article1 .speakers-list dl:nth-child(40),
+.speakers .section .article1 .speakers-list dl:nth-child(44),
+.speakers .section .article1 .speakers-list dl:nth-child(48),
+.speakers .section .article1 .speakers-list dl:nth-child(52),
+.speakers .section .article1 .speakers-list dl:nth-child(56),
+.speakers .section .article1 .speakers-list dl:nth-child(60),
+.speakers .section .article1 .speakers-list dl:nth-child(64), {
+  margin-right: 0;
+}
+
+.speakers .section .article1 .speakers-list dd {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.speakers .section .article1 .speakers-list dd h2 {
+  font-family: 'Stratum Bold';
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.speakers .section .article1 .speakers-list dd p {
+  margin-top: 10px;
+}
+
+.experience .section { position: relative; z-index: -2; }
+.experience .section .article1 {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #F79533 0%, #F37154 100%);
+  margin-top: 70px;
+  padding: 170px 0 30px;
+  position: relative;
+  z-index: -1;
+}
+
+.experience .section .article1 > h1 {
+  font-family: 'Stratum Heavy';
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+.experience .section .article1 .desc {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.experience .section .article1 .exp-list {
+  display: inline-block;
+  font-family: 'Stratum Bold';
+  margin-top: 100px;
+  overflow: auto;
+}
+
+.experience .section .article1 .exp-list li {
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-right: 40px;
+  float: left;
+}
+
+.experience .section .article1 .exp-list li a { color: #fff; }
+
+.experience .section .article1 .exp-list li:last-child { margin-right: 0; }
+
+.experience .section .article1 .exp-list li i {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.experience .section .learn-more {
+  font-family: 'Stratum Bold';
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.experience .section .learn-more a { color: #fff; }
+
+.experience .section .article1 .learn-more { margin-top: 120px; }
+.experience .section .article2 {
+  height: 400px;
+  color: #fff;
+  background: linear-gradient(-135deg, #F37055 0%, #EF4E7B 52%, #C55B95 77%, #A166AB 100%),
+  url(https://githubuniverse.com/assets/img/universe/venues.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: 0 -120px;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.experience .oval {
+  width: 100%; height: 2000px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  top: -55px; left: -545px;
+  opacity: 0.8;
+}
+
+.experience .section .article2 .oval { background: #C94365; }
+
+.experience .exp-menu {
+  position: absolute;
+  top: 170px; left: 215px;
+}
+
+.experience .exp-menu h1 {
+  font-family: 'Stratum Bold';
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.experience .exp-menu p {
+  font-size: 18px;
+}
+
+.experience .section .article3 {
+  color: #fff;
+  height: 500px;
+  text-align: center;
+  background: linear-gradient(135deg, #F37055 0%, #EF4E7B 42%, #C55B95 77%, #A166AB 100%);
+  padding: 100px 0;
+  position: relative;
+  z-index: -1;
+}
+
+.experience .section .article3 ul {
+  display: inline-block;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 50px 30px 40px;
+  overflow: auto;
+  position: relative;
+}
+
+.experience .section .article3 ul:after {
+  content: '';
+  display: block;
+  width: 100%; height: 15px;
+  border-top: 3px solid #fff;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+
+.experience .section .article3 ul li {
+  text-align: left;
+  margin-right: 70px;
+  float: left;
+}
+
+.experience .section .article3 ul li h2 {
+  font-family: 'Stratum Bold';
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.experience .section .article3 ul li p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.experience .section .article3 ul li a {
+  color: #fff;
+  font-family: 'Stratum Bold';
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.experience .section .article4 {
+  height: 400px;
+  color: #fff;
+  background: linear-gradient(-135deg, #F37055 0%, #EF4E7B 52%, #C55B95 77%, #A166AB 100%),
+  url(https://githubuniverse.com/assets/img/universe/san-francisco.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: 0 -120px;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.experience .section .article4 .oval { background: linear-gradient(-135deg, #F79533 0%, #EF4E7B 30%, #5073B8 48%, #07B39B 100%); }
+.experience .section .article5 {
+  color: #fff;
+  height: 1000px;
+  text-align: center;
+  background: linear-gradient(135deg, #F37055 0%, #EF4E7B 42%, #C55B95 77%, #A166AB 100%);
+  padding: 100px 0;
+  position: relative;
+  z-index: -1;
+}
+
+.experience .section .article5 ul {
+  display: inline-block;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  border-bottom: 0;
+  position: relative;
+}
+
+.experience .section .article5 ul:after {
+  content: '';
+  display: block;
+  width: 100%; height: 15px;
+  border-top: 3px solid #fff;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+
+.experience .section .article5 ul li {
+  text-align: left;
+  border-bottom: 3px solid #fff;
+  padding: 60px 85px;
+  overflow: auto;
+}
+
+.experience .section .article5 ul li  > * {
+  float: left;
+}
+
+.experience .section .article5 ul li > img {
+  width: 120px;
+  margin-right: 30px;
+}
+
+.experience .section .article5 ul li .desc .date {
+  font-family: 'Stratum Bold';
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.experience .section .article5 ul li .desc h2 {
+  font-family: 'Stratum Bold';
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.experience .section .article5 ul li .desc .join-team {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.experience .section .article5 ul li .desc .location {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.experience .section .article5 ul li .desc .location a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.experience .section .article6 {
+  height: 400px;
+  color: #fff;
+  background: linear-gradient(224deg, #A166AB 0%, #5073B8 62%, #1098AD 100%),
+  url("https://githubuniverse.com/assets/img/universe/bike.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.experience .section .article6 .oval {
+  background: linear-gradient(224deg, #A166AB 0%, #5073B8 62%, #1098AD 100%);
+}
+
+.experience .section .article7 {
+  text-align: center;
+  background: linear-gradient(224deg, #A166AB 0%, #5073B8 62%, #1098AD 100%);
+  padding: 100px 0;
+  position: relative;
+  z-index: -1;
+}
+
+.experience .section .article7 ul {
+  display: inline-block;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 50px 40px 20px;
+  position: relative;
+}
+
+.experience .section .article7 ul:after {
+  content: '';
+  display: block;
+  width: 100%; height: 15px;
+  border-top: 3px solid #fff;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+
+.experience .section .article7 ul li {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.experience .section .article7 ul li h2 {
+  font-family: 'Stratum Bold';
+  font-size: 25px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.experience .section .article7 ul li p {
+  font-size: 18px;
+}
+
+.experience .section .article8 {
+  height: 450px;
+  color: #fff;
+  background: linear-gradient(-135deg, #5073B8 0%, #1098AD 50%, #07B39B 100%),
+  url("https://githubuniverse.com/assets/img/universe/san-francisco-buildings.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.experience .section .article8 .oval {
+  background: linear-gradient(-135deg, #5073B8 0%, #1098AD 50%, #07B39B 100%);
+}
+
+.experience .section .article9 {
+  text-align: center;
+  background: linear-gradient(-135deg, #5073B8 0%, #1098AD 50%, #07B39B 100%);
+  padding: 100px 0;
+  position: relative;
+  z-index: -1;
+}
+
+.experience .section .article9 > ul {
+  display: inline-block;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.experience .section .article9 > ul > li {
+  font-size: 18px;
+  text-align: left;
+  padding: 50px 40px 0;
+  border-bottom: 3px solid #fff;
+  position: relative;
+}
+
+.experience .section .article9 > ul > li h2 {
+  font-family: 'Stratum Bold';
+  font-size: 25px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.experience .section .article9 > ul > li p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.experience .section .article9 > ul > li h3 {
+  font-family: 'Stratum Bold';
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.experience .section .article9 > ul > li .list { margin-bottom: 50px; }
+.experience .section .article9 > ul > li .list li { margin-bottom: 10px; }
+
+.experience .section .article9 > ul > li .list li:before {
+  content: '';
+  display: inline-block;
+  width: 10px; height: 10px;
+  background: url(https://githubuniverse.com/assets/img/universe/shapes/star.svg);
+  margin-right: 5px;
+}
+
+.experience .section .article9 > ul > li .list li a {
+  color: #fff;
+}
